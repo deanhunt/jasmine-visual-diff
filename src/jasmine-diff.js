@@ -39,7 +39,7 @@ document.body.addEventListener('click', function(evt){
     var target = evt.target;
     if (target.webkitMatchesSelector('.resultMessage')){
         // Bail out early if we're already showing a diff.
-        if (target.classList.contains('showing-diff')) return;
+        if (target.parentNode.classList.contains('showing-diff')) return;
 
         // Attempt to split our content into a before and after.
         // Note that we use the content from the stack trace, as the whitespace has been
