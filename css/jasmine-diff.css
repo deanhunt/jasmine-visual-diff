@@ -1,8 +1,15 @@
-.showing-diff:after {
+/**
+ * HACK(dean): Force-clear the floats from Mergely.
+ */
+.showing-diff .resultMessage:after {
     content: "\0020";
     display: block;
     height: 0;
     clear: both;
     overflow: hidden;
     visibility: hidden;
+}
+
+.showing-diff .stackTrace {
+    max-height: none;
 }

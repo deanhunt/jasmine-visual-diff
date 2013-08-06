@@ -1,6 +1,6 @@
 function appendDiff(target, matches){
     // Note that we're displaying a diff so we don't do this twice.
-    target.classList.add('showing-diff');
+    target.parentNode.classList.add('showing-diff');
 
     // Mergely requires that we bind to an element with an ID. Naturally, such IDs
     // must be unique, and Date.now() should do for our purposes.
@@ -8,6 +8,11 @@ function appendDiff(target, matches){
 
     // Clear out the element for the new Mergely view.
     target.innerHTML = '';
+
+    // We're also going to remove the redundant information from the stack trace.
+    var stackTrace = target.nextElementSibling.innerText;
+    stackTrace = stackTrace.replace(matches[0], '');
+    target.nextElementSibling.innerText = stackTrace;
 
     // Okay, at this point we *have* to use jQuery to satisfy Mergely.
     jQuery(target).mergely({
