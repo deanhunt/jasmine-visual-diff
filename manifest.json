@@ -9,7 +9,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["*://*/*/SpecRunner.html*"],
+            "matches": ["*://*/*/SpecRunner*"],
             "css": [
                 "css/codemirror.css",
                 "css/mergely.css",
