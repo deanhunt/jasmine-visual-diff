@@ -23,7 +23,7 @@ Use
 Limitations
 -----------
 
-* Only works on URLs container the text SpecRunner.html
+* Only works on URLs container the text `SpecRunner`
 * Only currently recognizes the form "Expected 'something' to be 'something else'"
 * Mergely has a viral license so it's not embeddable directly within application code (thus the extension)
 
