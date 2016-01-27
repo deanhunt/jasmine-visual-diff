@@ -37,7 +37,7 @@ document.body.addEventListener('click', function(evt){
     // Assuming we only care about the stack trace element itself, that it can't
     // contain other elements of interst.
     var target = evt.target;
-    if (target.webkitMatchesSelector('.resultMessage')){
+    if (target.webkitMatchesSelector('.resultMessage') || target.webkitMatchesSelector('.result-message')){
         // Bail out early if we're already showing a diff.
         if (target.parentNode.classList.contains('showing-diff')) return;
 
